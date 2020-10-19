@@ -112,7 +112,6 @@
 //   fmt.Println("length > width?", length > width)
 // }
 
-
 // package main
 // import "fmt"
 // func main() {
@@ -121,7 +120,7 @@
 //
 //   fmt.Println("Area is", length*float64(width))
 //   fmt.Println("length > width?", length > float64(width))
-// }
+//}
 
 package main
 import "fmt"
@@ -129,7 +128,76 @@ func main() {
   var length float64 = 1.2
   var width  int = 2
 
-  fmt.Println(length)
   fmt.Println("Area is", length*float64(width))
   fmt.Println("length > width?", length > float64(width))
 }
+
+// test string
+// darkblood
+
+// package main
+// import "fmt"
+// func main() {
+// 	fmt.Println("Hello world")
+// }
+
+// package main
+// import "fmt"
+// func main() {
+//     var price float64 = 100
+//
+//     fmt.Println("Price is", price, "dollars")
+//
+//     var taxRate float64 = 0.08
+//
+//     var tax float64 = (float64(price) * taxRate)
+//     fmt.Println("Tax is", tax, "dollars")
+// }
+
+package main
+import "fmt"
+func main() {
+    var price int = 100
+
+    fmt.Println("Price is", price, "dollars")
+
+    var taxRate float64 = 0.08
+
+    var tax float64 = (float64(price) * taxRate)
+    fmt.Println("Tax is", tax, "dollars")
+}
+
+// ниже код из примера на habr
+// package main
+//
+// import (
+//   "fmt"
+//   "strconv"
+// )
+//
+// func main() {
+//   var t map[string]interface{}     // Создаем переменную, сейчас она nil и мы не можем в неё класть ключи
+//   t = make(map[string]interface{}) // Создаем map  в памяти, теперь можем класть ключи
+//   t["key"] = "1"                   // Кладём ключ
+//
+//   var num int
+//
+//   rawValue, ok := t["key"] // Вытаскиваем ключ из map
+//   if ok {
+//     stringValue, ok := rawValue.(string) // Вытаскиваем string из interface{}
+//     if ok {
+//       var err error
+//       num, err = strconv.Atoi(stringValue) // Парсим string в int
+//       if err == nil {
+//         fmt.Println(num)
+//       } else {
+//         fmt.Println("Число имеет неверный формат")
+//       }
+//     } else {
+//       fmt.Println("Внутри interface{} лежит не тип string")
+//     }
+//   } else {
+//     fmt.Println("Такого ключа нет в map")
+//   }
+// }
+// 
